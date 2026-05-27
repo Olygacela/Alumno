@@ -1,0 +1,53 @@
+table {
+    order-collapse: collapse;
+    width: 80vw;
+    margin: 2 auto;
+}
+ {
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 18px;
+    text-align: center;
+    color: rosado;
+
+}
+
+th, td {
+    border: 10px solid #5c151c;
+    padding: 10px;
+    text-align: center;
+}
+}
+
+.total {
+    background-color: #198eac;
+    text-align: left;
+}
+
+tbody tr:nth-child(even)
+{
+    background-color: rgba(12, 208, 247, 0.502);
+    color: #fff;
+}
+    color: #0b7dda; 
+
+.title{
+    text-align: center;
+    color: blue;
+    text-size-adjust: 35px;
+    
+}
+{
+
+}
+    text-align: center;
+    color: blue;
+    text-size-adjust: 35px;
+    title{
+    text-align: center;
+    color: blue;
+    text-size-adjust: 35px;
+    
+
+
+    }b

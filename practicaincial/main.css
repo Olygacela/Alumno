@@ -1,0 +1,39 @@
+/* este es la hoja de estilos, asociada a la página
+CSS EXTERNO */
+body {
+    color: rgba(231, 225, 236, 0.941);
+    background-color: rgb(56, 5, 48);
+}
+
+/* h1 es el selector por el nombre la etiqueta */
+h1 {
+    color: #5555e8;
+    text-align: center;
+}
+
+h2 {
+    color: #0c0404;
+    text-align: left;
+}
+
+/* # es el selector por el id la etiqueta */
+#subtitulo {
+    text-align: center;
+    
+}
+
+/*las otras p's, las quiero en verde oscuro
+        con . selecciono a todas los elementos con esa clase*/
+.description {
+    color: rgb(8, 229, 104);
+}
+
+eye {
+    width: 200px;
+    height: 100px;
+  }
+
+  .eyelid {
+    animation: blink 4s infinite;
+    transform-origin: top;
+  }

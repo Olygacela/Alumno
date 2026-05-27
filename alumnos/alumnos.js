@@ -1,0 +1,128 @@
+//corchetes [] -- varios -- Array, lista, colección
+/*
+TODO: añadir un botón a la página alumno.html
+con el texto Añadir todos
+Cuando demos a ese botón, se deben mostrar
+en la tabla (inicialmente vacía) todos los alumnos
+del array alumnos
+
+Además, añadid, un atributo nuevo a cada alumno
+que es el id. Empezando por el 1 y siguiendo
+por el 2, 3, 4, etc.
+*/
+let alumnos = [
+    {
+        nombre: "Ana",
+        edad: 22,
+        curso: "Desarrollo Web",
+        email: "ana@email.com",
+        id:1
+    },
+    {
+        nombre: "Luis",
+        edad: 25,
+        curso: "JavaScript",
+        email: "luis@email.com",
+        id:2
+    },
+    {
+        nombre: "Marta",
+        edad: 21,
+        curso: "HTML y CSS",
+        email: "marta@email.com",
+        id:3
+    },
+    {
+        nombre: "Carlos",
+        edad: 28,
+        curso: "React",
+        email: "carlos@email.com",
+        id:4
+    }
+]
+
+console.log(alumnos[1].email);
+//TODO: haced un método, que reciba la lista de 
+// alumnos por parámetro y devuelva
+//el nombre del alumno con mayor edad
+
+function addAlumno() 
+{
+    let bodytabla = document.getElementById('bodytabla');
+    //CREAR UNA FILA
+    let filanueva = document.createElement('tr');
+    //CREAR 4 COLUMNAS
+    let columnaNombre = document.createElement('td');
+    let columnaEdad = document.createElement('td');
+    let columnaCurso = document.createElement('td');
+    let columnaEmail = document.createElement('td');
+    
+    columnaNombre.textContent = alumnos[0].nombre;
+    columnaEdad.textContent = alumnos[1].edad;
+    columnaCurso.textContent = alumnos[2].curso;
+    columnaEmail.textContent = alumnos[3].email;
+    //A CADA COLUMNA LE TENGO QUE PONER LOS DATOS DEL ALUMNO
+    filanueva.appendChild(columnaNombre);
+    filanueva.appendChild(columnaEdad);
+    filanueva.appendChild(columnaCurso);
+    filanueva.appendChild(columnaEmail);
+    //AÑADIR LA FILA A LA TABLA
+    bodytabla.appendChild(filanueva);
+}
+/*function addAlumnos()
+    let bodytabla = document.getElementById('bodytabla');
+    //CREAR UNA FILA
+    let filanueva = document.createElement('tr');
+    //CREAR 4 COLUMNAS
+    let columnaNombre = document.createElement('td');
+    let columnaEdad = document.createElement('td');
+    let columnaCurso = document.createElement('td');
+    let columnaEmail = document.createElement('td');
+    
+    columnaNombre.textContent = alumnos[0].nombre;
+    columnaEdad.textContent = alumnos[0].edad;
+    columnaCurso.textContent = alumnos[0].curso;
+    columnaEmail.textContent = alumnos[0].email;
+    //A CADA COLUMNA LE TENGO QUE PONER LOS DATOS DEL ALUMNO
+    filanueva.appendChild(columnaNombre);
+    filanueva.appendChild(columnaEdad);
+    filanueva.appendChild(columnaCurso);
+    filanueva.appendChild(columnaEmail);
+    //AÑADIR LA FILA A LA TABLA
+    bodytabla.appendChild(filanueva);
+    {
+       let bodytabla.appenchild() 
+    }*/
+    
+
+{
+    function calcularMediaEdad (){
+    let columnaNombre = document.createElement('td');
+    let columnaEdad = document.createElement('td');
+    let columnaCurso = document.createElement('td');
+    let columnaEmail = document.createElement('td');
+    
+    columnaNombre.textContent = alumnos[0].nombre;
+    columnaEdad.textContent = alumnos[1].edad;
+    columnaCurso.textContent = alumnos[2].curso;
+    columnaEmail.textContent = alumnos[3].email;
+    //A CADA COLUMNA LE TENGO QUE PONER LOS DATOS DEL ALUMNO
+    filanueva.appendChild(columnaNombre);
+    filanueva.appendChild(columnaEdad);
+    filanueva.appendChild(columnaCurso);
+    filanueva.appendChild(columnaEmail);
+
+    console.log( "Media" = " +media);
+    console.log (´Media = ${media }´); 
+
+    //AÑADIR LA FILA A LA TABLA
+    //bodytabla.appendChild(filanueva);
+}
+    }
+              
+//function calcularMediaEdad(){
+    //let media = 0;
+
+    return media;
+    // TODO: calcular la media 
+}

@@ -1,0 +1,112 @@
+<html>
+
+<head>
+    <title>
+        ADIVINA adivinanza
+    </title>
+    <!--
+ *
+ *El código de esta script, es un poco misterioso. Algún programador Clase "C", no ha usado
+ *nombres descriptivos y ahora, nos toca pegarnos y descubrir qué narices hace este código,
+ *para poder usarlo en nuestro proyecto.
+ *
+ *
+ *Se pide:
+ *
+ *1) Adivinar la funcionalidad del método adivinaQueHaceX
+ *2) Una vez descubierto, aplicar un nombre apropiado al métodoX
+ *3) Idear un método equivalente, pero distinto. Es decir, crear un método
+ *que haga lo mismo que adivinaQueHace, pero de otra manera.X
+ *4) EXTRA: Sólo si resolviste los puntos anteriores, implementa una versión recursivaX
+-->
+    <script language="javascript">
+
+
+
+
+ 
+// 1) y 2) FUNCIÓN ORIGINAL RENOMBRADA
+        // Funcionalidad: Detecta si una palabra es un palíndromo.
+        // ==========================================
+        function esPalindromo() {
+            var bd = true;
+            var cad = document.getElementById("palabra").value;
+            var i = 0;
+            var j = cad.length - 1;
+
+            while ((i < j) && (bd)) {
+                if (cad.charAt(i) == cad.charAt(j)) {
+                    bd = true;
+                } else {
+                    bd = false;
+                }
+                i++;
+                j--;
+            }
+
+            console.log("Resultado (Original): bd = " + bd);
+            // Pintamos el resultado en el párrafo para verlo en la pantalla
+            document.getElementById("p1").innerText = "Original: ¿Es palíndromo? " + bd;
+            return bd;
+        }
+
+        // ==========================================
+        // 3) MÉTODO EQUIVALENTE PERO DISTINTO
+        // Voltea la palabra usando funciones nativas de JS y la compara con la original
+        // ==========================================
+        function esPalindromoInvertir() {
+            var cad = document.getElementById("palabra").value;
+            
+            // Separamos en array, le damos la vuelta y lo volvemos a juntar
+            var cadInvertida = cad.split("").reverse().join("");
+            var resultado = (cad === cadInvertida);
+
+            console.log("Resultado (Invertir): " + resultado);
+            document.getElementById("p1").innerText = "Invertir: ¿Es palíndromo? " + resultado;
+            return resultado;
+        }
+
+        // ==========================================
+        // 4) EXTRA: VERSIÓN RECURSIVA
+        // Lanzador principal y función recursiva con casos base
+        // ==========================================
+        function comprobarPalindromoRecursivo() {
+            var cad = document.getElementById("palabra").value;
+            
+            // Llamamos a la función recursiva pasando los índices extremos (inicio y fin)
+            var resultado = evaluarRecursivo(cad, 0, cad.length - 1);
+            
+            console.log("Resultado (Recursivo): " + resultado);
+            document.getElementById("p1").innerText = "Recursivo: ¿Es palíndromo? " + resultado;
+            return resultado;
+        }
+
+        // Función interna que se llama a sí misma
+        function evaluarRecursivo(cadena, i, j) {
+            // Caso base 1: Si los índices se cruzan, todo ha coincidido
+            if (i >= j) {
+                return true;
+            }
+            // Caso base 2: Si un extremo no coincide con el otro, se rompe la condición
+            if (cadena.charAt(i) !== cadena.charAt(j)) {
+                return false;
+            }
+            // Paso recursivo: Vamos estrechando el cerco hacia el centro de la palabra
+            return evaluarRecursivo(cadena, i + 1, j - 1);
+        }
+
+    </script>
+</head>
+
+<body>
+    <label for="palabra">PALABRA</label>
+    <input type="text" id="palabra">
+    
+    <button onclick="esPalindromo();">Empieza</button>
+    <button onclick="esPalindromoInvertir();">Probar Alternativo</button>
+    <button onclick="comprobarPalindromoRecursivo();">Probar Recursivo</button>
+    
+    <p id="p1" style="font-weight: bold; margin-top: 15px;"></p>
+</body>
+
+</html>

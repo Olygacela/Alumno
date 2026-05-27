@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Formulario de Inscripción</title>
+<link rel="stylesheet" href="formularios.css">
+</head>
+
+<body>
+
+<h1>Formulario de inscripción</h1>
+
+<form class="formulario">
+
+<div class="fila">
+<div class="campo"><br>
+    <br>
+<label for="nombre">Nombre</label><br>
+<br>
+
+<input id="nombre" name="nombre" type="text" required><br>
+
+</div>
+<br>
+<div class="campo"><br>
+    <br>
+
+<label for="apellidos">Apellidos</label><br>
+<br>
+
+<input id="apellidos" name="apellidos" type="text" required><br>
+<br>
+
+</div>
+</div>
+
+<div class="campo"><br>
+
+<label for="email">Correo electrónico</label><br>
+
+<input id="email" name="email" type="email" required><br>
+<br>
+
+</div>
+
+<div class="campo"><br>
+    <br>
+
+<label for="edad">Edad</label><br>
+<br>
+
+<input id="edad" name="edad" type="number" required min="0" max="140"><br>
+
+</div>
+
+<div class="campo"><br>
+    <br>
+
+<label for="fecha">Fecha</label><br>
+<br>
+
+<input id="fecha" name="fecha" type="date" required><br>
+<br>
+
+</div>
+
+<fieldset class="campo campo-radio"><br>
+    <br>
+
+<legend>Sexo</legend><br>
+<br>
+
+<br>
+<div class="opciones-radio"><br>
+    <br>
+
+<div class="opcion-radio"><br>
+    <br>
+<input type="radio" id="sexo1" name="sexo" value="m"><br>
+<br>
+
+<label for="sexo1">Masculino</label><br>
+
+</div>
+<br>
+
+<div class="opcion-radio"><br>
+
+<input type="radio" id="sexo2" name="sexo" value="f"><br>
+<br>
+
+<label for="sexo2">Femenino</label><br>
+<br>
+
+</div>
+</div>
+</fieldset>
+
+<div class="campo"><br>
+    <br><br>
+<label for="curso">Curso</label><br>
+<br>
+<select id="curso" name="curso"><br>
+    <br>
+<option value="">Selecciona un curso</option><br>
+    <br>
+<option value="html">HTML</option><br>
+<br>
+
+<option value="css">CSS</option><br>
+<br>
+
+<option value="js">JavaScript</option>
+<br>
+
+</select><br>
+<br>
+
+</div>
+
+<div class="campo"><br>
+    <br>
+<label for="mensaje">Mensaje</label><br>
+<br>
+<textarea id="mensaje" name="mensaje"></textarea><br>
+</div>
+
+<div class="campo-check"><br>
+    <br>
+<input id="privacidad" name="privacidad" type="checkbox" required><br>
+<br>
+<label for="privacidad">Acepto la política de privacidad</label><br>
+
+</div>
+<br>
+<button type="submit">Enviar</button>? <br>
+<br>
+
+<button type="reset">Limpiar</button><br>
+
+
+</form>
+
+</body>
+
+</html>

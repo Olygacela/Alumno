@@ -1,0 +1,98 @@
+<style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#f4f4f4;
+      padding:40px;
+      color:#333;
+    }
+
+    .cv{
+      max-width:900px;
+      margin:auto;
+      background:white;
+      display:grid;
+      grid-template-columns:300px 1fr;
+      box-shadow:0 0 15px rgba(0,0,0,0.2);
+    }
+
+    .left{
+      background:#1e293b;
+      color:white;
+      padding:30px;
+    }
+
+    .left h1{
+      font-size:28px;
+      margin-bottom:10px;
+    }
+
+    .left p{
+      margin-bottom:8px;
+      font-size:14px;
+    }
+
+    .section{
+      margin-top:30px;
+    }
+
+    .section h2{
+      font-size:18px;
+      margin-bottom:15px;
+      border-bottom:2px solid #ffffff55;
+      padding-bottom:5px;
+    }
+
+    .skills li,
+    .languages li{
+      margin-bottom:8px;
+    }
+
+    .right{
+      padding:40px;
+    }
+
+    .right h2{
+      color:#1e293b;
+      margin-bottom:15px;
+      border-bottom:2px solid #1e293b;
+      padding-bottom:5px;
+    }
+
+    .job,
+    .study{
+      margin-bottom:25px;
+    }
+
+    .job h3,
+    .study h3{
+      font-size:18px;
+      margin-bottom:5px;
+    }
+
+    .date{
+      color:gray;
+      font-size:14px;
+      margin-bottom:10px;
+    }
+
+    ul{
+      padding-left:20px;
+    }
+
+    .profile{
+      margin-bottom:30px;
+      line-height:1.6;
+    }
+
+    @media(max-width:768px){
+      .cv{
+        grid-template-columns:1fr;
+      }
+    }
+  </style>

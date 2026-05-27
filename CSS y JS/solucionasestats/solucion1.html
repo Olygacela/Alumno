@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Estadísticas</title>
+    <link rel='stylesheet' href='main.css'>
+    <script src="estadisticas.js"></script>
+</head>
+<body>
+    <div id="padre">
+        <!-- Cabecera Verde -->
+        <div id="remates">
+            <img id="logolocal" src="" alt="">
+            <div>REMATES</div>
+            <img id="logovistante" src="" alt="">
+        </div>
+
+        <!-- Etiquetas Superiores -->
+        <div id="fuerapuerta">
+            <div id="fuerapuerta1">
+                <div>FUERA</div>
+                <div>A PUERTA</div>
+            </div>
+            <div id="fuerapuerta2">
+                <div>A PUERTA</div>
+                <div>FUERA</div>
+            </div>
+        </div>
+
+        <div id="fuerapuertacolor">
+            <div id="fuerapuertacolorlocal">
+                <span class="num-izq"></span>
+                <span class="num-der"></span>
+            </div>
+            <div id="fuerapuertacolorvisitante">
+                <span class="num-izq"></span>
+                <span class="num-der"></span>
+            </div>
+        </div>
+
+        <!-- Disparos Bloqueados -->
+        <div id="disparos">
+            <div class="titulo-bloqueados">DISPAROS EFECTUADOS BLOQUEADOS</div>
+            <div class="valores-bloqueados">
+                <span id="bloqueadosLocal"></span>
+                <span id="bloqueadosVisitante"></span>
+            </div>
+            <!-- Líneas de la base -->
+            <div class="lineas-contenedor">
+                <div class="linea-roja"></div>
+                <div class="linea-naranja"></div>
+            </div>
+        </div>
+    </div>
+    
+let imgLocal=document.getElementById("logolocal");
+imgLoal.src="estadisticas/escudo_local.png";
+let spanBold=document.querySelectorAll(".num-izq"); 
+span blockLocal=document.getElementById("bloqueadosLocal");
+<blockLocal class="alt"></blockLocal>= EstdiscasRemates.equipoLocal;
+
+let imgLoa=docuemnt.getElementById("logovistante");
+imgLoal.src="estadisticas/escudo_visitante.png";
+let spanBold2=document.querySelectorAll(".num-der");
+let blockVisitante=document.getElementById("bloqueadosVisitante");
+blockVisitante.textContent= EstadisticasRemates.equipoVisitante;  
+
+<!-- Solución JAIME: pongo el script más abajo
+     y así, ya existen todos los divs. Ya puedo
+     desde JS; pintar mis datos -->
+    <!-- <script src="estadisticas.js"></script> -->
+
+</body>
