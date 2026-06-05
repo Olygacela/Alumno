@@ -1,0 +1,94 @@
+const opciones = ["piedra", "papel", "tijera"];
+let puntosJugador = 0;
+let puntosComputadora = 0;
+let partidas = 0;
+
+let resultadoEl;
+let jugadorEl;
+let computadoraEl;
+let confettiEl;
+let botonesJuego;
+
+window.onload = function() {
+    resultadoEl = document.getElementById("resultado");
+    jugadorEl = document.getElementById("puntosJugador");
+    computadoraEl = document.getElementById("puntosComputadora");
+    confettiEl = document.getElementById("confetti");
+    botonesJuego = document.querySelectorAll(".opcion");
+    reiniciarJuego();
+}
+
+function jugar(usuario) {
+    if (partidas >= 5) return;
+
+    partidas++;
+    const computadora = opciones[Math.floor(Math.random() * opciones.length)];
+    let mensaje = "Tú elegiste " + usuario + " y la computadora eligió " + computadora + ".<br>";
+
+    if (usuario === computadora) {
+        mensaje += "🤝 Empate";
+    } else if (
+        (usuario === "piedra" && computadora === "tijera") ||
+        (usuario === "papel" && computadora === "piedra") ||
+        (usuario === "tijera" && computadora === "papel")
+    ) {
+        mensaje += "🎉 ¡Ganaste!";
+        puntosJugador++;
+    } else {
+        mensaje += "😢 Perdiste";
+        puntosComputadora++;
+    }
+
+    resultadoEl.innerHTML = mensaje;
+    jugadorEl.textContent = puntosJugador;
+    computadoraEl.textContent = puntosComputadora;
+
+    if (partidas === 5) {
+        terminarJuego();
+    }
+}
+
+function terminarJuego() {
+    const mensajeFinal = puntosJugador > puntosComputadora
+        ? "Juego terminado. ¡El ganador es el jugador!"
+        : puntosComputadora > puntosJugador
+            ? "Juego terminado. ¡El ganador es la computadora!"
+            : "Juego terminado. ¡Es un empate!";
+
+    resultadoEl.innerHTML = mensajeFinal;
+    botonesJuego.forEach((boton) => boton.disabled = true);
+    lanzarConfetti();
+}
+
+function reiniciarJuego() {
+    puntosJugador = 0;
+    puntosComputadora = 0;
+    partidas = 0;
+    resultadoEl.textContent = "Elige una opción";
+    jugadorEl.textContent = "0";
+    computadoraEl.textContent = "0";
+    botonesJuego.forEach((boton) => boton.disabled = false);
+    confettiEl.innerHTML = "";
+}
+function lanzarConfetti() {
+    if (!confettiEl) return;
+
+    confettiEl.innerHTML = "";
+    const colores = ["#ff4d4d", "#ffcc00", "#4dff4d", "#4d94ff", "#ff4dff"];
+
+    for (let i = 0; i < 80; i++) {
+        const confetto = document.createElement("div");
+        confetto.className = "confetto";
+        confetto.style.backgroundColor = colores[Math.floor(Math.random() * colores.length)];
+        confetto.style.left = Math.random() * 100 + "%";
+        confetto.style.width = 6 + Math.random() * 8 + "px";
+        confetto.style.height = 6 + Math.random() * 8 + "px";
+        confetto.style.animationDuration = 3 + Math.random() * 1.5 + "s";
+        confetto.style.transform = "rotate(" + Math.random() * 360 + "deg)";
+        confettiEl.appendChild(confetto);
+    }
+
+    setTimeout(() => {
+        confettiEl.innerHTML = "";
+    }, 5000);
+}

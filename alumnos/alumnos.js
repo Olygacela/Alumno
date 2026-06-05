@@ -56,6 +56,7 @@ function addAlumno()
     let columnaEdad = document.createElement('td');
     let columnaCurso = document.createElement('td');
     let columnaEmail = document.createElement('td');
+    botonBorrar.appendChild(botonBorrar)
     
     columnaNombre.textContent = alumnos[0].nombre;
     columnaEdad.textContent = alumnos[1].edad;
@@ -125,4 +126,11 @@ function addAlumno()
 
     return media;
     // TODO: calcular la media 
-}
+
+
+//filtro 
+
+let inputFiltro = document.getElementById("filtroNombre");
+    inputFiltro.addEventListener("input"),
+        () => {
+     }

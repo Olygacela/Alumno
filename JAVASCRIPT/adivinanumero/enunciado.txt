@@ -1,0 +1,68 @@
+HACED UNA PAGINA PARA QUE EL USUARIO JUEGUE A ADIVINAR UN NUMERO
+
+ {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #222;
+}
+
+h1 {
+    text-align: center;
+}
+
+.formulario {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 44px;
+    background-color: #fff;
+    border: 3px solid #ddd;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.fila {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.campo {
+    margin-bottom: 20px;
+    flex: 1 1 200px;
+}
+
+.campo label,
+.campo legend {
+    display: block;
+    margin: 0 0 20px;
+    font-weight: bold;
+}
+
+.campo input,
+.campo textarea,
+.campo select {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    border: 4px solid #aaa;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.campo textarea {
+    min-height: 200px;
+    resize: vertical;
+}
+
+.campo input:focus,
+.campo textarea:focus,
+.campo select:focus {
+    outline: 6px solid #e61212;
+    border-color: #de6062;
+}
+

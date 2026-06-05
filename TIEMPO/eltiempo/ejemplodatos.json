@@ -1,0 +1,44 @@
+{
+    "coord": {
+        "lon": -3,
+        "lat": 40
+    },
+    "weather": [
+        {
+            "id": 803,
+            "main": "Clouds",
+            "description": "muy nuboso",
+            "icon": "04d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 16.64,
+        "feels_like": 15.98,
+        "temp_min": 16.64,
+        "temp_max": 16.64,
+        "pressure": 1015,
+        "humidity": 62,
+        "sea_level": 1015,
+        "grnd_level": 926
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 7.37,
+        "deg": 136,
+        "gust": 7.83
+    },
+    "clouds": {
+        "all": 70
+    },
+    "dt": 1780647024,
+    "sys": {
+        "country": "ES",
+        "sunrise": 1780634645,
+        "sunset": 1780688230
+    },
+    "timezone": 7200,
+    "id": 6357533,
+    "name": "Tarancón",
+    "cod": 200
+}
